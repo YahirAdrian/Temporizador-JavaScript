@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta ame="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Temporizador</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="shortcut icon" href="src/temporizador.png" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lato&family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="main">
+
+            <h1>Temporizador</h1>
+            <div class="config">
+                <button id="btn-display">Crear Temporizador</button>
+                <form id="formulario-configuracion">
+                    <h3>Tiempo</h3>
+                    <div id="horas" class="input-row">
+                        <label for="input-horas class="alternative">Horas</span>
+                        <input type="number" min="0" max="23" id="input-horas" value="0"/>
+                    </div>
+                    <div id="minutos" class="input-row">
+                        <label for="input-minutos" class="alternative">Minutos</span>
+                        <input type="number" min="0" max="59" id="input-minutos" value="0"/>
+                    </div>
+                    <div id="segundos" class="input-row">
+                        <label for="input-segundos" class="alternative">Segundos</span>
+                        <input type="number" min="0" max="59" id="input-segundos" value="0"/>
+                    </div>
+                </form>
+                
+                
+            </div>
+            
+            <section>
+                <div class="tiempo">
+                    <span id="timer">00:00:00</span>
+                </div>    
+                
+                <nav id="acciones">
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="512" height="512" x="0" y="0" viewBox="0 0 45.975 45.975" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g>
+                            <g xmlns="http://www.w3.org/2000/svg">
+                                <g>
+                                    <path d="M13.987,0c-2.762,0-5,2.239-5,5v35.975c0,2.763,2.238,5,5,5s5-2.238,5-5V5C18.987,2.238,16.75,0,13.987,0z" fill="#ffffff" data-original="#000000"/>
+                                    <path d="M31.987,0c-2.762,0-5,2.239-5,5v35.975c0,2.762,2.238,5,5,5s5-2.238,5-5V5C36.987,2.239,34.749,0,31.987,0z" fill="#ffffff" data-original="#000000"/>
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="512" height="512" x="0" y="0" viewBox="0 0 429.354 429.354" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g transform="matrix(4.2862637970157366e-16,1,1,-4.2862637970157366e-16,-0.00006103515630684342,0.00006103515630684342)">
+                            <g xmlns="http://www.w3.org/2000/svg">
+                                <g>
+                                    <path d="M372.53,82.843C336.673,30.958,277.621-0.009,214.55,0C108.512,0.115,22.644,86.17,22.759,192.208    c0.107,98.751,75.105,181.317,173.392,190.888L163.638,415.6c-3.178,3.07-3.266,8.134-0.196,11.312    c3.07,3.178,8.134,3.266,11.312,0.196c0.067-0.064,0.132-0.13,0.196-0.196l45.248-45.248c0.747-0.745,1.337-1.632,1.736-2.608    c0.809-1.957,0.809-4.155,0-6.112c-0.399-0.976-0.989-1.863-1.736-2.608l-45.248-45.248c-3.178-3.07-8.243-2.982-11.312,0.196    c-2.994,3.1-2.994,8.015,0,11.116l30.4,30.4C97.56,355.44,28.559,268.019,39.919,171.541S138.7,6.061,235.178,17.422    s165.48,98.781,154.119,195.259c-5.908,50.177-33.107,95.39-74.667,124.119c-3.691,2.428-4.714,7.389-2.286,11.08    c2.429,3.691,7.389,4.714,11.08,2.286c0.105-0.069,0.208-0.141,0.31-0.214C410.969,289.666,432.815,170.078,372.53,82.843z" fill="#ffffff" data-original="#000000"/>
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><g xmlns="http://www.w3.org/2000/svg">
+                            <path d="m461.867 408.253c32.544-43.809 50.133-96.679 50.133-152.253 0-68.38-26.628-132.667-74.98-181.02-48.353-48.351-112.64-74.98-181.02-74.98v30c60.367 0 117.121 23.508 159.806 66.194 42.686 42.686 66.194 99.439 66.194 159.806 0 48.763-15.347 95.163-43.742 133.7l-3.439-39.309-29.886 2.614 7.844 89.657 89.658-7.844-2.614-29.886z" fill="#ffffff" data-original="#000000"/>
+                            <path d="m30 256c0-48.763 15.347-95.163 43.742-133.7l3.439 39.309 29.886-2.614-7.844-89.657-89.658 7.843 2.614 29.886 37.953-3.32c-32.543 43.809-50.132 96.679-50.132 152.253 0 68.38 26.628 132.667 74.98 181.02 48.353 48.351 112.64 74.98 181.02 74.98v-30c-60.367 0-117.121-23.508-159.806-66.194-42.686-42.686-66.194-99.439-66.194-159.806z" fill="#ffffff" data-original="#000000"/>
+                            <path d="m271 181h-30v90h90v-30h-60z" fill="#ffffff" data-original="#000000"/>
+                            <path d="m256 121c-74.439 0-135 60.561-135 135s60.561 135 135 135 135-60.561 135-135-60.561-135-135-135zm0 240c-57.897 0-105-47.103-105-105s47.103-105 105-105 105 47.103 105 105-47.103 105-105 105z" fill="#ffffff" data-original="#000000"/></g></g>
+                        </svg>
+                    </button>
+                </nav>
+            </section>
+
+        <script src="js/app.js"></script>
+    </body>
+</html>
