@@ -16,20 +16,29 @@ html, body{
     background: linear-gradient(to left, #2267c2, #15427c);
 }
 
+#encabezado{
+    text-align: center;
+    color: #F1F1F1;
+    padding: 20px;
+    margin: 20px;
+    background-color: #F1F1F137;
+    border-radius: 10px;
+}
 .main{
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+    bottom:0;
+    margin: auto;
     background-color: #f1f6fc80;
     display: block;
-    position: absolute;
-    top:0;
-    bottom: 0;
-    right: 0;
-    left:0;
     width: 80%;
     min-width: 380px;
     max-width: 750px;
+    max-height: 50vh;
     height: auto;
     min-height: 500px;
-    margin: auto;
     border-radius: 2em;
     padding: 20px 1em;
     box-shadow: 2px 4px 6px #f1f1f1;
@@ -47,9 +56,14 @@ html, body{
     max-width: 700px;
     min-height: 400px;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-#btn-display{
+
+
+#btn-display, #formulario-configuracion button[type="submit"]{
     padding: 4px;
     margin: 10px;
     width: -webkit-fill-available;
@@ -66,8 +80,6 @@ h3{
 
 #formulario-configuracion{
     width: -webkit-fill-available;
-    padding: auto;
-    /* background-color: #15427c; */
     margin: 20px;
     padding: 1em;
 }
@@ -120,9 +132,24 @@ h3{
     margin: auto;
 }
 
+#temporizador{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 200vh;
+    background-color: #F1F1F1;
+    border-radius: 2em;
+    padding: 20px 15px;
+    margin: auto 5vh;
+    height: 90vh;
+    min-height: -webkit-fill-available;
+    box-sizing: content-box;
+}
+
 #timer{
     display: flex;
-    margin: 4em auto 1em auto;
+    margin: 1em auto;
     justify-content: center;
     align-items: center;
     width: 400px;
