@@ -25,7 +25,6 @@ class Timer{
             this.segundosTranscurridos++;
             this.porcentaje =((this.segundosTranscurridos * 100) / this.totalSegundos);
             
-            console.log(this);
             temporizador.temporizador.style.backgroundImage = `linear-gradient(0deg, #6DADFF ${this.porcentaje}%, #F1F1F1 0%)`;
             if(this.segundos !==0){
                 //Si los segundos son mayores a cero, se restan los segundos
@@ -35,6 +34,7 @@ class Timer{
                 if(this.segundos === 0 && this.minutos === 0 && this.horas === 0){
                     // temporizador.temporizador.textContent = "¡Se acabó el tiempo!";
                     this.parar();
+                    new Notification("El temporizador ha llegado a cero", {icon: '../src/temporizador.png'});
                 }else{
                     if(this.minutos !== 0){
                         //So los minutos son mayores a cero, se restan los minutos y se ponen 59 segundos

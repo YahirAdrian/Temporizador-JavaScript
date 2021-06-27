@@ -32,7 +32,7 @@ html, body{
     bottom:0;
     margin: auto;
     background-color: #f1f6fc80;
-    display: block;
+    display: flex;
     width: 80%;
     min-width: 380px;
     max-width: 750px;
@@ -77,6 +77,10 @@ html, body{
     font-size: 1.3em;
     border-radius: 4px;
     cursor: pointer;
+}
+
+#btn-display{
+    margin: 40px 10px;
 }
 
 h3{
@@ -145,6 +149,7 @@ h3{
 #acciones{
     display: flex;
     justify-content: center;
+    margin-bottom: 20%;
 }
 
 #acciones button{
@@ -181,6 +186,8 @@ h3{
     margin: auto;
     min-height: -webkit-fill-available;
     box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
 }
 
 #timer{

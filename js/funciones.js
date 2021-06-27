@@ -54,6 +54,11 @@ export function mostrarFormulario(mostrar = true){
 
 export function comenzarTemporizador(tiempo){
 
+    Notification.requestPermission();
+
+    if(Notification.requestPermission === "denied"){
+        alert("Permite las notificaciones para poder recibir una notificación cuando el temporizador llegue a cero");
+    }
     const temporizador = new Timer(tiempo);
     temporizador.play();
 
