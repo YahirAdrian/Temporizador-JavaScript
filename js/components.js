@@ -18,7 +18,8 @@ const AppComponents = {
         timeCount: document.querySelectorAll('.time'),
         hoursLeft: document.querySelector('#hours-left'),
         minutesLeft: document.querySelector('#minutes-left'),
-        secondsLeft: document.querySelector('#seconds-left')
+        secondsLeft: document.querySelector('#seconds-left'),
+        reloj: document.querySelector('#reloj')
     },
 
     //botones
@@ -27,7 +28,7 @@ const AppComponents = {
         botones: document.querySelectorAll('#acciones button'),
         btnPlay: document.querySelector('#btn-play'),
         btnRestart: document.querySelector('#btn-restart'),
-        btnStop: document.querySelector('#btn-stop')
+        btnSalir: document.querySelector('#btn-salir')
     }
 }
 

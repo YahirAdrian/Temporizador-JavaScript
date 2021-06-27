@@ -1,0 +1,52 @@
+.aparecer{
+    animation: 2s aparecerDesaparecer linear 1;
+    display: block !important;
+    transform: translateY(0) !important;
+    opacity: 1;
+}
+
+.mostrando{
+    display: block;
+}
+
+.sin-mostrar{
+    display: none;
+}
+
+.temporizador-abajo{
+    animation: 1s aparecerTemporizador linear 2;
+    animation-direction: alternate;
+}
+
+.temporizador-arriba{
+    animation: 1s aparecerTemporizador linear 2;
+    animation-direction: reverse;
+}
+
+@keyframes aparecerDesaparecer {
+    from{
+       display: none;
+       height: 0px;
+       overflow: hidden;
+       opacity: 0;
+       transform: translateY(150%);
+    }
+
+    to{
+        display: block;
+        height: auto;
+        overflow: initial;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes aparecerTemporizador{
+    from{
+        bottom: 200vh;
+    }
+
+    to{
+        bottom: 0vh;
+    }
+}

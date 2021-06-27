@@ -1,17 +1,48 @@
 import AppComponents from "./components.js";
+import {
+    validarFormulario,
+    mostrarAlerta,
+    mostrarTemporizador,
+    mostrarFormulario,
+    comenzarTemporizador
+} from './funciones.js';
 
 (function(){
 
     const {formulario, temporizador, acciones} = AppComponents;
 
+    let primeraVez = false;
     console.log(AppComponents);
     formulario.btnIniciarTemporizador.addEventListener('click', ()=>{
+
         if(!formulario.formularioTemporizador.classList.contains('aparecer')){
-            //Hacer que aparezca el formulario 
-            formulario.formularioTemporizador.classList.add('aparecer');
+            mostrarFormulario();
+            primeraVez = true;
         }else{
             //Desaparecer el formulario
-            formulario.formularioTemporizador.classList.remove('aparecer');
+            mostrarFormulario(false);
+            primeraVez = false;
         }
     });
+
+
+    formulario.btnSubmitFormulario.addEventListener('click', ()=> primeraVez = false);
+    //Evento al enviar el formulario
+    formulario.formularioTemporizador.addEventListener('submit', (e)=>{
+        e.preventDefault();
+        //Validar todos los campos del formularios que no tengan 00:00:00
+        if(validarFormulario(formulario.inputsFormulario)){
+            mostrarTemporizador();
+            const tiempo = {
+                horas: formulario.inputsFormulario[0].value,
+                minutos: formulario.inputsFormulario[1].value,
+                segundos: formulario.inputsFormulario[2].value
+            }
+            //Comenzar a correr el temporizador
+            comenzarTemporizador(tiempo);
+        }else{
+            mostrarAlerta(primeraVez);
+        }
+    });
+    
 })();
