@@ -23,7 +23,7 @@ export function mostrarAlerta(primeraVez){
         mensaje.textContent = "¡No puedes iniciar un temporizador con 0 segundos!";
         mensaje.classList.add('mensaje-error');
         formulario.formularioTemporizador.appendChild(mensaje);
-        setTimeout(()=>mensaje.remove(), 2500);
+        setTimeout(()=>mensaje.remove(), 2000);
     }
 }
 
@@ -58,13 +58,9 @@ export function comenzarTemporizador(tiempo){
     temporizador.play();
 
     //Agregar eventos para los botones
-    acciones.btnPlay.addEventListener('click', ()=>{
-        console.log("Parar");
-    });
+    acciones.btnPlay.addEventListener('click', ()=> temporizador.pausar_reanudar());
 
-    acciones.btnRestart.addEventListener('click', ()=>{
-        console.log("Reiniciar");
-    });
+    acciones.btnRestart.addEventListener('click', ()=> temporizador.reiniciar());
 
-    acciones.btnSalir.addEventListener('click', temporizador.parar);
+    acciones.btnSalir.addEventListener('click',()=> temporizador.parar());
 }

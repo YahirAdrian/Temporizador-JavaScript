@@ -12,7 +12,7 @@ import {
     const {formulario, temporizador, acciones} = AppComponents;
 
     let primeraVez = false;
-    console.log(AppComponents);
+
     formulario.btnIniciarTemporizador.addEventListener('click', ()=>{
 
         if(!formulario.formularioTemporizador.classList.contains('aparecer')){

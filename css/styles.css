@@ -96,9 +96,12 @@ h3{
     border-radius: 10px;
     background: #f40303f5;
     color: #FFF;
-    height: 50%;
+    height: 200px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 100%;
+    border: 2px solid #F1F1F1;
 }
 
 #formulario-configuracion{

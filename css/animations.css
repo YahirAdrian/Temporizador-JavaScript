@@ -1,5 +1,5 @@
 .aparecer{
-    animation: 2s aparecerDesaparecer linear 1;
+    animation: 1s aparecerDesaparecer linear 1;
     display: block !important;
     transform: translateY(0) !important;
     opacity: 1;
@@ -14,39 +14,45 @@
 }
 
 .temporizador-abajo{
-    animation: 1s aparecerTemporizador linear 2;
+    animation: 1s aparecerTemporizador linear 1;
     animation-direction: alternate;
 }
 
 .temporizador-arriba{
-    animation: 1s aparecerTemporizador linear 2;
-    animation-direction: reverse;
+    animation: 1s desaparecerTemporizador linear 1;
 }
 
+#manecillas{
+    animation: 60s girar linear infinite;
+    transform-origin: bottom left ;
+    transform-box: fill-box;
+    transform: scale(0.9);
+    transform: translateX(5px);
+}
 @keyframes aparecerDesaparecer {
     from{
-       display: none;
-       height: 0px;
-       overflow: hidden;
-       opacity: 0;
+       opacity: 0.5;
        transform: translateY(150%);
     }
 
     to{
-        display: block;
-        height: auto;
-        overflow: initial;
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-@keyframes aparecerTemporizador{
-    from{
-        bottom: 200vh;
-    }
+@keyframes desaparecerTemporizador{
+    from{ bottom: 0vh; }
+    to{ bottom: 250vh; }
+}
 
-    to{
-        bottom: 0vh;
-    }
+@keyframes aparecerTemporizador{
+    from{bottom: 200vh;}
+
+    to{ bottom: 0vh; }
+}
+
+@keyframes girar{
+    from{ transform: rotate(0deg) scale(0.9) translateX(-15px); }
+    to{ transform: rotate(360deg) scale(0.9) translateX(-15px); }
 }
