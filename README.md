@@ -1,5 +1,5 @@
 # Temporizador JavaScript
-Temporizador hecho con javascript hecho como proyecto de css y javascript
+Temporizador hecho con javascript hecho como proyecto de css y javascript usando animaciones 
 
 ## Capturas de pantalla
 ![Pantalla de temporizador](https://github.com/YahirAdrian/Temporizador-JavaScript/blob/master/src/screenshots/timer.jpeg?raw=true "Pantalla temporizador")
